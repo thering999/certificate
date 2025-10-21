@@ -28,8 +28,8 @@ docker-compose up -d
 
 ### Step 1: Download
 ```bash
-git clone https://github.com/your-repo/certificate-system.git
-cd certificate-system
+git clone https://github.com/thering999/certificate.git
+cd certificate
 ```
 
 ### Step 2: Setup Environment
@@ -173,6 +173,8 @@ Development: HDC AI Project Team
 Stack: Bootstrap 5.3.2, PHP 8.2, MySQL 8.0
 Icons: Font Awesome 6.4.0
 PDF: mPDF
+Repository: https://github.com/thering999/certificate
+Last Updated: October 21, 2025 - v2.1.0
 
 ---
 
