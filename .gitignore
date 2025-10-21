@@ -1,0 +1,106 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+/var/log/
+
+# Temporary files
+temp_png/*
+!temp_png/.gitkeep
+/tmp/
+*.tmp
+
+# Backup files
+backup/*.sql
+*.bak
+*.backup
+
+# Dependencies
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# Build files
+*.zip
+*.tar.gz
+*.rar
+
+# User uploaded files
+assets/templates/*.jpg
+assets/templates/*.png
+assets/templates/*.gif
+!assets/templates/.gitkeep
+
+# Database
+*.sqlite
+*.db
+
+# OS files
+Thumbs.db
+desktop.ini
+.Spotlight-V100
+.Trashes
+
+# PHP
+*.cache
+.php_cs.cache
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# PHPUnit
+.phpunit.result.cache
+coverage/
+
+# Composer
+composer.phar
+
+# Sensitive information
+private_keys/
+certificates/
+ssl/
+*.key
+*.pem
+*.crt
+
+# Cache
+cache/
+*.cache
+
+# Session files
+sessions/
+tmp/
+
+# Error logs
+error.log
+php_errors.log
+
+# Test files
+phpunit.xml
+.phpunit.result.cache
+
+# Package managers
+yarn.lock
+pnpm-lock.yaml
+
+# Build artifacts
+dist/
+build/
+
+# Documentation build
+docs/_build/
+site/

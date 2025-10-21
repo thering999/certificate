@@ -1,0 +1,197 @@
+/* 
+ * Enhanced Design Inspiration Panel Styles
+ * สำหรับ Designer Page
+ */
+
+/* Design Tips Panel */
+.design-tips-panel {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-top: 3px solid #667eea;
+}
+
+.design-tip-box {
+    transition: all 0.3s ease;
+    background: white;
+    border-left: 5px solid #667eea;
+}
+
+.design-tip-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.design-tip-box.tip-color {
+    border-left-color: #667eea;
+}
+
+.design-tip-box.tip-font {
+    border-left-color: #52c41a;
+}
+
+.design-tip-box.tip-position {
+    border-left-color: #faad14;
+}
+
+.design-tip-box.tip-layout {
+    border-left-color: #1890ff;
+}
+
+.design-tip-box.tip-border {
+    border-left-color: #f5222d;
+}
+
+.design-tip-box.tip-print {
+    border-left-color: #722ed1;
+}
+
+/* Tip Title Styling */
+.tip-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tip-title i {
+    font-size: 16px;
+}
+
+/* Tip Content */
+.tip-content {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.tip-content ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.tip-content li {
+    margin-bottom: 8px;
+}
+
+.tip-content strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.tip-content a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tip-content a:hover {
+    text-decoration: underline;
+}
+
+/* Tip Footer */
+.tip-footer {
+    font-size: 11px;
+    color: #999;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.tip-footer i {
+    margin-right: 4px;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 16px;
+}
+
+.quick-links-section .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    font-weight: 500;
+}
+
+/* Alert Info Box */
+.design-intro-alert {
+    background: linear-gradient(135deg, #e6f7ff 0%, #bae7ff 100%);
+    border: 1px solid #91d5ff;
+    border-radius: 6px;
+    color: #0050b3;
+}
+
+/* Canva Link Button */
+.canva-link-btn {
+    background: linear-gradient(135deg, #0099ff 0%, #0077cc 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    margin-top: 12px;
+}
+
+.canva-link-btn:hover {
+    background: linear-gradient(135deg, #0077cc 0%, #005fa3 100%);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .design-tip-box {
+        margin-bottom: 12px;
+    }
+    
+    .tip-title {
+        font-size: 13px;
+    }
+    
+    .tip-content {
+        font-size: 12px;
+    }
+    
+    .quick-links-section .btn {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+/* Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.design-tips-panel {
+    animation: slideDown 0.5s ease;
+}
+
+/* Print Styles */
+@media print {
+    .design-tips-panel {
+        page-break-inside: avoid;
+        background: white;
+        border: 1px solid #ddd;
+    }
+    
+    .design-tip-box {
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+    }
+    
+    .quick-links-section {
+        display: none;
+    }
+}

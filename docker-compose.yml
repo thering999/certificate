@@ -1,0 +1,43 @@
+﻿version: '3.8'
+
+services:
+  php-docker:
+    build: .
+    container_name: php-docker
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - D:/www:/var/www/html
+    environment:
+      MYSQL_HOST: mysql-docker
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
+    depends_on:
+      - mysql-docker
+    networks:
+      - php_network
+
+  mysql-docker:
+    image: mysql:8.0
+    container_name: mysql-docker
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: certificate_system
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - php_network
+
+volumes:
+  mysql_data:
+
+networks:
+  php_network:
+    driver: bridge

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .content h2 {
+            color: #3b82f6;
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        .stats-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .success-stat {
+            color: #22c55e;
+            font-weight: bold;
+        }
+        .fail-stat {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f3f4f6;
+            font-weight: bold;
+            text-align: left;
+        }
+        td {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ การประมวลผลเสร็จสิ้น!</h1>
+        </div>
+        
+        <div class="content">
+            <h2>สวัสดี {{ username }}!</h2>
+            
+            <p>การประมวลผลแบบกลุ่มของคุณเสร็จเรียบร้อยแล้ว ดูสรุปผลด้านล่าง</p>
+            
+            <div class="stats-box">
+                <table>
+                    <tr>
+                        <th style="text-align: left;">รายการ</th>
+                        <th style="text-align: right;">จำนวน</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">📊 ทั้งหมด</td>
+                        <td style="text-align: right;"><strong>{{ total_processed }}</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">✅ สำเร็จ</td>
+                        <td style="text-align: right;"><span class="success-stat">{{ success_count }}</span></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">❌ ล้มเหลว</td>
+                        <td style="text-align: right;"><span class="fail-stat">{{ fail_count }}</span></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">📈 อัตราความสำเร็จ</td>
+                        <td style="text-align: right;"><strong>{{ success_rate }}%</strong></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p style="text-align: center;">
+                <a href="{{ report_link }}" class="button">📋 ดูรายงานอย่างละเอียด</a>
+            </p>
+            
+            <?php if ({{ fail_count }} > 0): ?>
+            <div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 15px; margin: 15px 0; border-radius: 4px;">
+                <strong>⚠️ มีข้อมูลที่ล้มเหลว:</strong><br>
+                มีระเบียน {{ fail_count }} รายที่ล้มเหลวในการประมวลผล โปรดตรวจสอบรายงานเพื่อดูรายละเอียด
+            </div>
+            <?php endif; ?>
+            
+            <p>หากคุณมีคำถามใด ๆ โปรดติดต่อทีมสนับสนุนของเรา</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; {{ current_year }} {{ system_name }}. All rights reserved.</p>
+            <p>อีเมลนี้ถูกส่งโดยอัตโนมัติ โปรดอย่าตอบกลับ</p>
+        </div>
+    </div>
+</body>
+</html>

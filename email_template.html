@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Sarabun', 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
+        .email-container { max-width: 600px; margin: 0 auto; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; }
+        .header h1 { margin: 0; font-size: 28px; }
+        .content { padding: 30px; }
+        .content h2 { color: #764ba2; margin-top: 0; }
+        .content p { line-height: 1.8; color: #555; font-size: 16px; }
+        .button { display: inline-block; background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin: 20px 0; font-weight: bold; }
+        .footer { background: #f8f9fa; padding: 20px; text-align: center; color: #999; font-size: 14px; }
+        .certificate-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>🏆 ใบประกาศของคุณพร้อมแล้ว!</h1>
+        </div>
+        <div class="content">
+            <h2>เรียน คุณ{{RECIPIENT_NAME}}</h2>
+            <p>ยินดีด้วย! ใบประกาศของคุณได้รับการออกแบบและสร้างเรียบร้อยแล้ว</p>
+            
+            <div class="certificate-info">
+                <p><strong>รายละเอียดใบประกาศ:</strong></p>
+                <ul>
+                    <li>ชื่อผู้รับ: <strong>{{RECIPIENT_NAME}}</strong></li>
+                    <li>วันที่สร้าง: <strong>{{DATE_CREATED}}</strong></li>
+                    <li>ประเภท: <strong>ใบประกาศเกียรติคุณ</strong></li>
+                </ul>
+            </div>
+
+            <p>ไฟล์ใบประกาศอยู่ในไฟล์แนบ กรุณาดาวน์โหลดและตรวจสอบความถูกต้อง</p>
+            
+            <p style="text-align: center;">
+                <strong>หากมีข้อสงสัยหรือต้องการแก้ไข กรุณาติดต่อเรา</strong>
+            </p>
+        </div>
+        <div class="footer">
+            <p>© 2025 ระบบออกแบบใบประกาศ | สำนักงานสาธารณสุขจังหวัดมุกดาหาร</p>
+            <p>Email นี้ส่งโดยระบบอัตโนมัติ กรุณาอย่าตอบกลับ</p>
+        </div>
+    </div>
+</body>
+</html>

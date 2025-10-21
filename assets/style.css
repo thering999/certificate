@@ -1,0 +1,356 @@
+/* ===== Global Styles ===== */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Card Components ===== */
+.card-custom {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 1.5rem;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  animation: slideUp 0.6s ease-out;
+}
+
+/* ===== Buttons ===== */
+.btn-custom {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.btn-custom:active {
+  transform: translateY(0);
+}
+
+.btn-primary.btn-custom {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+}
+
+.btn-success.btn-custom {
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+  border: none;
+}
+
+.btn-warning.btn-custom {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  border: none;
+}
+
+.btn-danger.btn-custom {
+  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  border: none;
+}
+
+/* ===== Table Styles ===== */
+.table-custom {
+  background: rgba(255,255,255,0.9);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.table-custom thead th {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+.table-custom tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table-custom tbody tr:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: scale(1.01);
+}
+
+/* ===== Form Elements ===== */
+.form-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border-radius: 0.75rem;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.2s ease;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  transform: scale(1.02);
+}
+
+/* ===== Alerts ===== */
+.alert {
+  border-radius: 1rem;
+  border: none;
+  animation: slideDown 0.5s ease-out;
+}
+
+.alert-info {
+  background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  color: #667eea;
+  border-left: 4px solid #667eea;
+}
+
+/* ===== Badge Styles ===== */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ===== Preview Certificate ===== */
+#certPreview {
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+#certPreview:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ===== Loading Spinner ===== */
+.spinner {
+  display: none;
+  margin: 0 auto;
+}
+
+.spinner-border {
+  animation: spin 1s linear infinite, pulse 2s ease-in-out infinite alternate;
+}
+
+/* ===== Animations ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .card-custom { 
+    padding: 1.5rem; 
+    margin: 1rem;
+  }
+  
+  .row > [class^='col-'] { 
+    margin-bottom: 1rem; 
+  }
+  
+  .btn-custom {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .card-custom {
+    padding: 1rem;
+  }
+  
+  .btn-custom {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+  position: relative;
+  z-index: 2;
+}
+
+.user-info-badge {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Feature Cards ===== */
+.feature-card {
+  border: none;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-card .card-header {
+  border: none;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2) !important;
+}
+
+/* ===== Quick Actions ===== */
+.quick-actions .btn {
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+.quick-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== Stats ===== */
+.stat-item {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.stat-item h4 {
+  font-weight: 700;
+}
+
+/* ===== Export Actions ===== */
+.export-actions {
+  padding: 1.5rem;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.export-actions .btn {
+  min-width: 180px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+/* ===== Admin Controls ===== */
+.admin-controls .card {
+  border-left: 4px solid #ffc107;
+}
+
+/* ===== Responsive Improvements ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .export-actions .btn {
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card .card-body {
+    padding: 1rem;
+  }
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+}
