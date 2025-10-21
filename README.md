@@ -144,7 +144,7 @@ docker-compose down && docker-compose up -d
 
 ## Support
 
-Email: support@certificate-system.local
+Email: habusaya@gmail.com
 GitHub Issues: Report bugs
 GitHub Discussions: Ask questions
 
@@ -169,7 +169,7 @@ v1.0.0 - August 1, 2025
 
 ## Credits
 
-Development: HDC AI Project Team
+Development: กลุ่มงานสุขภาพดิจิทัล สสจ.มุกดาหาร
 Stack: Bootstrap 5.3.2, PHP 8.2, MySQL 8.0
 Icons: Font Awesome 6.4.0
 PDF: mPDF
