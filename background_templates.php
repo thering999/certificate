@@ -136,6 +136,16 @@ function generateBackgroundPreview($preset) {
     $height = 400;
     $border = $preset['border_width'];
     
+    // Pre-calculate dimensions
+    $border_width = $width - 2*$border;
+    $border_height = $height - 2*$border;
+    $inner_x = $border + 5;
+    $inner_y = $border + 5;
+    $inner_width = $width - 2*$border - 10;
+    $inner_height = $height - 2*$border - 10;
+    $text_x = $width / 2;
+    $text_y = $height / 2;
+    
     // Create gradient
     $gradient_id = 'grad_' . $preset['id'];
     
@@ -164,15 +174,15 @@ function generateBackgroundPreview($preset) {
     <rect width="$width" height="$height" fill="url(#ornament)" opacity="0.3"/>
     
     <!-- Border -->
-    <rect x="$border" y="$border" width="{$width - 2*$border}" height="{$height - 2*$border}" 
+    <rect x="$border" y="$border" width="$border_width" height="$border_height" 
           fill="none" stroke="{$preset['border_color']}" stroke-width="3" stroke-dasharray="5,5" opacity="0.5"/>
     
     <!-- Inner Border -->
-    <rect x="{$border + 5}" y="{$border + 5}" width="{$width - 2*$border - 10}" height="{$height - 2*$border - 10}" 
+    <rect x="$inner_x" y="$inner_y" width="$inner_width" height="$inner_height" 
           fill="none" stroke="{$preset['border_color']}" stroke-width="1" opacity="0.3"/>
     
     <!-- Sample Text -->
-    <text x="{$width/2}" y="{$height/2}" font-family="THSarabunNew, sans-serif" font-size="32" 
+    <text x="$text_x" y="$text_y" font-family="THSarabunNew, sans-serif" font-size="32" 
           font-weight="bold" text-anchor="middle" fill="{$preset['accent_color']}" opacity="0.8">
           Preview
     </text>
