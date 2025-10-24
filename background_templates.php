@@ -6,13 +6,14 @@
 session_start();
 require_once 'db.php';
 
-if (!isset($_SESSION['user_id'])) {
+$action = $_GET['action'] ?? '';
+
+// Allow preview without authentication
+if ($action !== 'preview' && !isset($_SESSION['user_id'])) {
     header('Content-Type: application/json');
     echo json_encode(['error' => 'Unauthorized']);
     exit;
 }
-
-$action = $_GET['action'] ?? '';
 
 // Background Presets - สีและลายเพ้นท์
 $background_presets = [
